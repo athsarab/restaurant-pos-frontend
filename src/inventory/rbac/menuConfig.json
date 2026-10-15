@@ -1,0 +1,275 @@
+{
+  "tabs": [
+    { "key": "overview", "label": "Overview" },
+    { "key": "operations", "label": "Operations" },
+    { "key": "inventory", "label": "Inventory" },
+    { "key": "purchasing", "label": "Purchasing" },
+    { "key": "menu", "label": "Menu" },
+    { "key": "finance", "label": "Finance & Reports" },
+    { "key": "admin", "label": "Admin" }
+  ],
+  "items": [
+    {
+      "key": "dashboard",
+      "label": "Dashboard",
+      "path": "dashboard",
+      "tab": "overview",
+      "group": "Overview",
+      "icon": "ChartBarIcon"
+    },
+    {
+      "key": "kitchenDashboard",
+      "label": "Kitchen Dashboard",
+      "path": "kitchen-dashboard",
+      "tab": "operations",
+      "group": "Kitchen",
+      "icon": "BeakerIcon"
+    },
+    {
+      "key": "kitchenOrders",
+      "label": "Kitchen Orders",
+      "path": "kitchen-orders",
+      "tab": "operations",
+      "group": "Kitchen",
+      "icon": "BeakerIcon"
+    },
+    {
+      "key": "kitchenUsage",
+      "label": "Kitchen Usage",
+      "path": "usage",
+      "tab": "operations",
+      "group": "Kitchen",
+      "icon": "WrenchScrewdriverIcon"
+    },
+    {
+      "key": "stockIssue",
+      "label": "Stock Issue",
+      "path": "stock-issue",
+      "tab": "operations",
+      "group": "Kitchen",
+      "icon": "CubeIcon"
+    },
+    {
+      "key": "stockIssueHistory",
+      "label": "Stock Issue History",
+      "path": "stock-issue-history",
+      "tab": "operations",
+      "group": "Kitchen",
+      "icon": "ClipboardDocumentListIcon"
+    },
+    {
+      "key": "kitchenInventory",
+      "label": "Kitchen Inventory",
+      "path": "kitchen-inventory",
+      "tab": "operations",
+      "group": "Kitchen",
+      "icon": "CubeIcon"
+    },
+    {
+      "key": "productionPlanning",
+      "label": "Production Planning",
+      "path": "production-planning",
+      "tab": "operations",
+      "group": "Kitchen",
+      "icon": "BeakerIcon"
+    },
+    {
+      "key": "bakeryProductionEntry",
+      "label": "Bakery Production",
+      "path": "bakery-production",
+      "tab": "operations",
+      "group": "Kitchen",
+      "icon": "BeakerIcon"
+    },
+    {
+      "key": "cashierDashboard",
+      "label": "Cashier Dashboard",
+      "path": "cashier-dashboard",
+      "tab": "operations",
+      "group": "Orders",
+      "icon": "ComputerDesktopIcon"
+    },
+    {
+      "key": "waiterDashboard",
+      "label": "Waiter Dashboard",
+      "path": "waiter-dashboard",
+      "tab": "operations",
+      "group": "Orders",
+      "icon": "ClipboardDocumentCheckIcon"
+    },
+    {
+      "key": "orderAnalytics",
+      "label": "Order Analytics",
+      "path": "order-analytics",
+      "tab": "finance",
+      "group": "Analytics",
+      "icon": "PresentationChartLineIcon"
+    },
+    {
+      "key": "deliveryManagement",
+      "label": "Delivery Management",
+      "path": "delivery-management",
+      "tab": "operations",
+      "group": "Delivery",
+      "icon": "TruckIcon"
+    },
+    {
+      "key": "deliveryAnalytics",
+      "label": "Delivery Analytics",
+      "path": "delivery-analytics",
+      "tab": "finance",
+      "group": "Analytics",
+      "icon": "PresentationChartLineIcon"
+    },
+    {
+      "key": "deliveryHistory",
+      "label": "Delivery History",
+      "path": "delivery-history",
+      "tab": "operations",
+      "group": "Delivery",
+      "icon": "ClipboardDocumentListIcon"
+    },
+
+    {
+      "key": "inventory",
+      "label": "Inventory",
+      "path": "inventory",
+      "tab": "inventory",
+      "group": "Stock",
+      "icon": "CubeIcon"
+    },
+    {
+      "key": "stockRequests",
+      "label": "Stock Requests",
+      "path": "requests",
+      "tab": "inventory",
+      "group": "Stock",
+      "icon": "ClipboardDocumentListIcon"
+    },
+    {
+      "key": "wastageManagement",
+      "label": "Wastage Management",
+      "path": "wastage-management",
+      "tab": "inventory",
+      "group": "Stock Control",
+      "icon": "TrashIcon"
+    },
+    {
+      "key": "outOfStock",
+      "label": "Out of Stock",
+      "path": "out-of-stock",
+      "tab": "inventory",
+      "group": "Stock Control",
+      "icon": "ExclamationTriangleIcon"
+    },
+    {
+      "key": "categories",
+      "label": "Categories",
+      "path": "categories",
+      "tab": "inventory",
+      "group": "Setup",
+      "icon": "TagIcon"
+    },
+
+    {
+      "key": "purchaseOrderGrn",
+      "label": "Purchase Order / GRN",
+      "path": "purchase-order",
+      "tab": "purchasing",
+      "group": "GRN",
+      "icon": "ClipboardDocumentListIcon"
+    },
+    {
+      "key": "grnReport",
+      "label": "GRN Report",
+      "path": "grn-report",
+      "tab": "purchasing",
+      "group": "GRN",
+      "icon": "ChartBarIcon"
+    },
+    {
+      "key": "suppliers",
+      "label": "Suppliers",
+      "path": "suppliers",
+      "tab": "purchasing",
+      "group": "Suppliers",
+      "icon": "TruckIcon"
+    },
+    {
+      "key": "supplierPayments",
+      "label": "Supplier Payments",
+      "path": "supplier-payments",
+      "tab": "purchasing",
+      "group": "Suppliers",
+      "icon": "BanknotesIcon"
+    },
+
+    {
+      "key": "menuRecipes",
+      "label": "Menu & Recipes",
+      "path": "menu-management",
+      "tab": "menu",
+      "group": "Menu",
+      "icon": "BookOpenIcon"
+    },
+    {
+      "key": "menuPacking",
+      "label": "Menu Packing",
+      "path": "menu-packing",
+      "tab": "menu",
+      "group": "Menu",
+      "icon": "CubeIcon"
+    },
+    {
+      "key": "menuAnalytics",
+      "label": "Menu Analytics",
+      "path": "menu-analytics",
+      "tab": "menu",
+      "group": "Analytics",
+      "icon": "PresentationChartLineIcon"
+    },
+
+    {
+      "key": "smsCampaigns",
+      "label": "SMS Campaigns",
+      "path": "sms-campaigns",
+      "tab": "finance",
+      "group": "Marketing",
+      "icon": "ChatBubbleLeftEllipsisIcon"
+    },
+
+    {
+      "key": "transactions",
+      "label": "All Transactions",
+      "path": "transactions",
+      "tab": "finance",
+      "group": "Finance",
+      "icon": "BanknotesIcon"
+    },
+    {
+      "key": "reportsAnalytics",
+      "label": "Reports & Analytics",
+      "path": "reports",
+      "tab": "finance",
+      "group": "Analytics",
+      "icon": "ChartBarIcon"
+    },
+
+    {
+      "key": "staffManagement",
+      "label": "Staff Management",
+      "path": "staff",
+      "tab": "admin",
+      "group": "Administration",
+      "icon": "UsersIcon"
+    },
+    {
+      "key": "accessControl",
+      "label": "Access Control",
+      "path": "permissions",
+      "tab": "admin",
+      "group": "Administration",
+      "icon": "HomeModernIcon"
+    }
+  ]
+}

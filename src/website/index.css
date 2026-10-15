@@ -1,0 +1,610 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Professional Dark Theme Restaurant Design System */
+
+@layer base {
+  :root {
+    /* Professional Dark Theme Color Palette */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+
+    /* Primary Red Palette (Enhanced for Dark) */
+    --primary: 0 84% 65%; /* Brighter red for dark theme */
+    --primary-foreground: 0 0% 98%;
+    --primary-dark: 0 84% 50%;
+    --primary-light: 0 84% 75%;
+    
+    /* Dark Secondary Colors */
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 85%;
+    --secondary-dark: 0 0% 8%;
+    
+    /* Dark Neutral Grays */
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
+    --neutral: 0 0% 85%;
+    --neutral-light: 0 0% 20%;
+    
+    /* Dark UI Elements */
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 90%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 0 84% 65%;
+    
+    /* Dark Interactive States */
+    --accent: 0 84% 65%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Dark Popover */
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 90%;
+    
+    /* Professional Dark Design Tokens */
+    --radius: 0.75rem;
+    --shadow-elegant: 0 8px 32px hsl(0 0% 0% / 0.5);
+    --shadow-card: 0 4px 16px hsl(0 0% 0% / 0.3);
+    --shadow-button: 0 4px 14px hsl(0 84% 65% / 0.4);
+    --shadow-glow: 0 0 20px hsl(0 84% 65% / 0.3);
+    --gradient-primary: linear-gradient(135deg, hsl(0 84% 65%), hsl(0 84% 50%));
+    --gradient-subtle: linear-gradient(135deg, hsl(0 0% 12%), hsl(0 0% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 84% 60% / 0.95), hsl(0 0% 0% / 0.8));
+    --gradient-dark: linear-gradient(135deg, hsl(0 0% 5%), hsl(0 0% 10%));
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 85%;
+    --sidebar-primary: 0 84% 65%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 85%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 0 84% 65%;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+    --primary: 0 84% 60%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 15%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 0 84% 60%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 90%;
+    --input: 0 0% 95%;
+    --ring: 0 84% 60%;
+  }
+}
+
+/* Enhanced Dark Animation System */
+@layer utilities {
+  /* Smooth Transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-fast {
+    transition: var(--transition-fast);
+  }
+  
+  /* Professional Dark Hover Effects */
+  .hover-scale {
+    @apply transition-smooth hover:scale-105;
+  }
+  
+  .hover-lift {
+    @apply transition-smooth hover:-translate-y-2;
+  }
+
+  .hover-glow {
+    @apply transition-smooth;
+  }
+
+  .hover-glow:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .hover-float {
+    @apply transition-smooth hover:-translate-y-1;
+  }
+  
+  /* Professional Dark Background Gradients */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-dark {
+    background: var(--gradient-dark);
+  }
+  
+  /* Professional Dark Shadow System */
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-button {
+    box-shadow: var(--shadow-button);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Professional Dark Glass Effects */
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/5 border border-white/10;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-lg bg-gray-900/90 border border-gray-800 shadow-elegant;
+  }
+
+  .glass-card-light {
+    @apply backdrop-blur-lg bg-gray-800/80 border border-gray-700 shadow-elegant;
+  }
+}
+
+/* Enhanced Dark Component Styles */
+@layer components {
+  /* Professional Dark Menu Cards */
+  .menu-card {
+    @apply bg-gray-900 rounded-2xl border border-gray-800 shadow-card hover-lift transition-smooth;
+    @apply hover:border-red-600/50 hover:shadow-glow;
+  }
+  
+  /* Professional Dark Button Styles */
+  .btn-primary {
+    @apply bg-gradient-primary text-white font-semibold px-8 py-3 rounded-xl shadow-button hover-scale transition-smooth;
+    @apply hover:shadow-glow;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-800 text-red-400 border-2 border-red-500 font-semibold px-8 py-3 rounded-xl hover-scale transition-smooth;
+    @apply hover:bg-gray-700 hover:shadow-glow hover:border-red-400;
+  }
+  
+  /* Professional Dark Navigation */
+  .nav-professional {
+    @apply bg-gray-900/95 backdrop-blur-md border-b border-gray-800 shadow-elegant;
+  }
+  
+  /* Enhanced Dark Typography */
+  .text-hero {
+    @apply text-4xl md:text-6xl lg:text-7xl font-bold text-gray-100;
+  }
+  
+  .text-section {
+    @apply text-3xl md:text-4xl font-bold text-gray-100;
+  }
+
+  .text-gradient-primary {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600;
+  }
+
+  /* Professional Dark Badges */
+  .badge-primary {
+    @apply bg-red-600 text-white border-0 shadow-lg;
+  }
+
+  .badge-secondary {
+    @apply bg-gray-800 text-red-400 border border-red-500 shadow-md;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background: linear-gradient(135deg, hsl(0 0% 5%), hsl(0 0% 8%));
+    min-height: 100vh;
+  }
+  
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Professional Dark Keyframe Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-gentle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes bounce-gentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(0 84% 65% / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px hsl(0 84% 65% / 0.5);
+  }
+}
+
+/* Dark Animation Classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out;
+}
+
+.animate-pulse-gentle {
+  animation: pulse-gentle 2s ease-in-out infinite;
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Staggered Animation Delays */
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-400 {
+  animation-delay: 0.4s;
+}
+
+/* Enhanced Animation System */
+@layer utilities {
+  /* Smooth Transitions */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-fast {
+    transition: var(--transition-fast);
+  }
+  
+  /* Professional Hover Effects */
+  .hover-scale {
+    @apply transition-smooth hover:scale-105 hover:shadow-button;
+  }
+  
+  .hover-lift {
+    @apply transition-smooth hover:-translate-y-2 hover:shadow-elegant;
+  }
+
+  .hover-glow {
+    @apply transition-smooth hover:shadow-elegant hover:shadow-red-500/25;
+  }
+
+  .hover-float {
+    @apply transition-smooth hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  /* Professional Background Gradients */
+  .bg-gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  /* Professional Shadow System */
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-button {
+    box-shadow: var(--shadow-button);
+  }
+
+  /* Professional Glass Effects */
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/10 border border-white/20;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-lg bg-white/95 border border-white/30 shadow-elegant;
+  }
+}
+
+/* Enhanced Component Styles */
+@layer components {
+  /* Professional Menu Cards */
+  .menu-card {
+    @apply bg-white rounded-2xl border border-gray-200 shadow-card hover-lift transition-smooth;
+    @apply hover:border-red-200 hover:shadow-red-500/10;
+  }
+  
+  /* Professional Button Styles */
+  .btn-primary {
+    @apply bg-gradient-primary text-white font-semibold px-8 py-3 rounded-xl shadow-button hover-scale transition-smooth;
+    @apply hover:shadow-red-500/30;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-red-600 border-2 border-red-600 font-semibold px-8 py-3 rounded-xl hover-scale transition-smooth;
+    @apply hover:bg-red-50 hover:shadow-button;
+  }
+  
+  /* Professional Navigation */
+  .nav-professional {
+    @apply bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-elegant;
+  }
+  
+  /* Enhanced Typography */
+  .text-hero {
+    @apply text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900;
+  }
+  
+  .text-section {
+    @apply text-3xl md:text-4xl font-bold text-gray-900;
+  }
+
+  .text-gradient-primary {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-400;
+  }
+
+  /* Professional Badges */
+  .badge-primary {
+    @apply bg-red-600 text-white border-0 shadow-lg;
+  }
+
+  .badge-secondary {
+    @apply bg-white text-red-600 border border-red-200 shadow-md;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Professional Keyframe Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-gentle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes bounce-gentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Animation Classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out;
+}
+
+.animate-pulse-gentle {
+  animation: pulse-gentle 2s ease-in-out infinite;
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Staggered Animation Delays */
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-400 {
+  animation-delay: 0.4s;
+}
