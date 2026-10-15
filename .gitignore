@@ -1,0 +1,36 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+.env*
+
+private_key.pem
+
+/keys/ronan-jobs-portal-web-ec2-key.pem
+/keys/private_key.pem
+/keys/public_key.pem
+/keys/id_ed25519
+/keys/id_ed25519.pub
+
+/private
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
